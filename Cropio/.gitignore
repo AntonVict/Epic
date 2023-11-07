@@ -23,4 +23,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.
 .vs/*
+*/Debug
+
+*.cache
