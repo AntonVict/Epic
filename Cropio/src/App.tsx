@@ -28,7 +28,8 @@ function App() {
 
         </p>
       </div>
-      <Image_Upload/>
+      
+      <Upload_Form_PASCAL_VOC/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
