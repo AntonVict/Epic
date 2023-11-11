@@ -2,7 +2,7 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Image_Upload from './Components/Image_Upload.tsx'
+import Upload_Form_PASCAL_VOC from './Components/Upload_Form_PASCAL_VOC'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,12 +23,9 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> yep.
-        
-
+          Edit <code>src/App.tsx</code> yep
         </p>
       </div>
-      
       <Upload_Form_PASCAL_VOC/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
