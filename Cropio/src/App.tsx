@@ -5,7 +5,6 @@ import './App.css'
 import Upload_Form_PASCAL_VOC from './Components/Upload_Form_PASCAL_VOC'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -18,14 +17,6 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> yep
-        </p>
-      </div>
       <Upload_Form_PASCAL_VOC/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

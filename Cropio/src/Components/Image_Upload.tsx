@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import { selectClasses } from '@mui/material';
+import React, { useState, ChangeEvent } from 'react';
 
+function Image_Upload() {
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
 
-function Image_Upload()
-{
-    const [selectedImage, setSelectedImage] = useState(null);
-
-   return (
-   <div>
-    {selectedImage && (
+  return (
+    <div>
+      {selectedImage && (
         <div>
-         <img
+          <img
             alt="not found"
             width={"250px"}
             src={URL.createObjectURL(selectedImage)}
@@ -18,20 +15,23 @@ function Image_Upload()
           <br />
           <button onClick={() => setSelectedImage(null)}>Remove</button>
         </div>
-        )}
-        
+      )}
+
       <br />
       <br />
-      
+
       <input
         type="file"
         name="myImage"
-        onChange={(event) => {
-          console.log(event.target.files[0]);
-          setSelectedImage(event.target.files[0]);
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          if (event.target.files) {
+            console.log(event.target.files[0]);
+            setSelectedImage(event.target.files[0]);
+          }
         }}
-        />
-   </div> 
-   );
+      />
+    </div>
+  );
 }
-export default Image_Upload
+
+export default Image_Upload;
